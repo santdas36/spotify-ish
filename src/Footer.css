@@ -12,7 +12,6 @@
   white-space: nowrap;
   line-height: 1.25;
   margin: 0;
-  margin-bottom: 0.25rem;
 }
 .footer p {
   font-size: 14px !important;
@@ -42,11 +41,11 @@
 }
 
 .footer__icon .MuiSvgIcon-root {
-  font-size: 24px !important;
+  height: 24px !important;
   transition: transform 0.2s ease-in-out;
 }
 .footer__iconPlay .MuiSvgIcon-root {
-  font-size: 48px !important;
+  height: 48px !important;
   transition: transform 0.2s ease-in-out;
 }
 
