@@ -19,7 +19,7 @@
   white-space: nowrap;
   margin: 0;
 }
-.footer__right * .MuiSlider-root {
+.footer__right .MuiSlider-root {
   color: green !important;
 }
 .footer__left {
@@ -41,11 +41,11 @@
   justify-content: center;
 }
 
-.footer__icon * .MuiSvgIcon-root {
+.footer__icon .MuiSvgIcon-root {
   font-size: 24px !important;
   transition: transform 0.2s ease-in-out;
 }
-.footer__iconPlay * .MuiSvgIcon-root {
+.footer__iconPlay .MuiSvgIcon-root {
   font-size: 48px !important;
   transition: transform 0.2s ease-in-out;
 }
