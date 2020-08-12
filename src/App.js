@@ -12,7 +12,7 @@ function App() {
   const [{ token }, dispatch] = useStateValue();
 
   useEffect(() => {
-    // Set token
+
     const hash = getTokenFromResponse();
     window.location.hash = "";
     let _token = hash.access_token;
@@ -24,8 +24,24 @@ function App() {
         type: "SET_TOKEN",
         token: _token,
       });
+      
+      const discoverApi = "https://api.spotify.com/v1/views/made-for-x";
+      const headers =  {
+		method: "GET",
+		headers: {
+		"Authorization": `Bearer  ${_token}`
+		}
+	  };
+	  
+	  const getDiscoverWeekly = async () => {
+         await fetch(discoverApi, headers)
+          .then((response) => response.json())
+          .then(console.log(data))
+        };
 
-      s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+        getDiscoverWeekly();
+    
+        s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
