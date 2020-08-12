@@ -40,11 +40,11 @@ function App() {
 
         getDiscoverWeekly();
     
-   //     s.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) =>
-   //     dispatch({
-//          type: "SET_DISCOVER_WEEKLY",
-    //      discover_weekly: response,
-//        })
+        s.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) =>
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
      // );
 
       s.getMyTopArtists().then((response) =>
