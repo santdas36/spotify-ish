@@ -89,8 +89,8 @@ function Footer({ spotify }) {
           </div>
         ) : (
           <div className="footer__songInfo">
-            <h4>Select a song to start playing...</h4>
-            <p>You must have a Premium subscription to play songs</p>
+            <h4>Pick a song to play...</h4>
+            <p>Premium subscriotion required</p>
           </div>
         )}
       </div>
@@ -101,12 +101,12 @@ function Footer({ spotify }) {
         {playing ? (
           <PauseRoundedIcon
             onClick={handlePlayPause}
-            className="footer__icon footer__icon-play"
+            className="footer__iconPlay"
           />
         ) : (
           <PlayArrowRoundedIcon
             onClick={handlePlayPause}
-            className="footer__icon footer__icon-play"
+            className="footer__iconPlay"
           />
         )}
         <SkipNextRoundedIcon onClick={skipNext} className="footer__icon" />
