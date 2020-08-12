@@ -45,7 +45,7 @@ function App() {
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
         })
-     // );
+      );
 
       s.getMyTopArtists().then((response) =>
         dispatch({
