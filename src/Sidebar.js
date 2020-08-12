@@ -18,7 +18,7 @@ function Sidebar() {
       <div className="sidebar__items">
         <SidebarItem Icon={HomeIcon} option="Home" />
         <SidebarItem Icon={SearchIcon} option="Search" />
-        <SidebarItem Icon={LibraryMusicIcon} option="Your Library" />
+        <SidebarItem Icon={LibraryMusicIcon} className="sidebar__icons-library" option="Your Library" />
       </div>
       
       <strong className="sidebar__title">PLAYLISTS</strong>

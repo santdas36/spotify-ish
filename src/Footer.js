@@ -90,7 +90,7 @@ function Footer({ spotify }) {
         ) : (
           <div className="footer__songInfo">
             <h4>Select a song to start playing...</h4>
-            <p>You must have a Premium subscriotion to play songs</p>
+            <p>You must have a Premium subscription to play songs</p>
           </div>
         )}
       </div>
