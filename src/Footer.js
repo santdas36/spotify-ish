@@ -97,21 +97,21 @@ function Footer({ spotify }) {
 
       <div className="footer__center">
         <ShuffleRoundedIcon className="footer__icon" />
-        <SkipPreviousRoundedIcon onClick={skipPrevious} className="footer__icon" />
+        <SkipPreviousRoundedIcon onClick={skipPrevious} className="footer__icon" style={{ fontSize: 32 }}  />
         {playing ? (
           <PauseRoundedIcon
             onClick={handlePlayPause}
             className="footer__icon"
-            fontSize="large"
+            style={{ fontSize: 40 }} 
           />
         ) : (
           <PlayArrowRoundedIcon
             onClick={handlePlayPause}
             className="footer__icon"
-            fontSize="large"
+            style={{ fontSize: 40 }} 
           />
         )}
-        <SkipNextRoundedIcon onClick={skipNext} className="footer__icon" />
+        <SkipNextRoundedIcon onClick={skipNext} className="footer__icon" style={{ fontSize: 32 }} />
         <RepeatRoundedIcon className="footer__icon" />
       </div>
       <div className="footer__right">
