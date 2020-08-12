@@ -35,18 +35,17 @@ function App() {
 	  
 	  const getDiscoverWeekly = async () => {
          await fetch(discoverApi, headers)
-          .then((response) => response.json())
-          .then(data =>{console.log('here >>>', data)})
+          .then((response) => console.log('here >>>', response))
         };
 
         getDiscoverWeekly();
     
-        s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
-        dispatch({
-          type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
-        })
-      );
+   //     s.getPlaylist("37i9dQZEVXcJZyENOWUFo7").then((response) =>
+   //     dispatch({
+//          type: "SET_DISCOVER_WEEKLY",
+    //      discover_weekly: response,
+//        })
+     // );
 
       s.getMyTopArtists().then((response) =>
         dispatch({
