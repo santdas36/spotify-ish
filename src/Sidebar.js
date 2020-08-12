@@ -15,7 +15,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <img className="sidebar__logo" src={logoWhite} alt="spotify logo" />
-      <div className="sidebar__options">
+      <div className="sidebar__items">
         <SidebarItem Icon={HomeIcon} option="Home" />
         <SidebarItem Icon={SearchIcon} option="Search" />
         <SidebarItem Icon={LibraryMusicIcon} option="Your Library" />
