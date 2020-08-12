@@ -11,12 +11,12 @@
   color: white;
 }
 
-.SidebarItem__icon {
+.sidebarItem__icon {
   margin-right: 1rem;
   font-size: 1.2rem;
 }
 
 
-.SidebarItem > h4 {
+.sidebarItem > h4 {
   font-size: 1.2rem;
 }
