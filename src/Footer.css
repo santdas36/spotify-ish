@@ -31,11 +31,10 @@
 }
 
 .footer__center {
-  flex: 0 0 40%;
+  flex: 0.4;
   color: white;
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
 .footer__icon {
@@ -54,7 +53,7 @@
   flex: 0.3;
 }
 
-.footer__albumArt {
+.footer__left .footer__albumArt {
   height: 60px;
   width: 60px;
   object-fit: contain;
