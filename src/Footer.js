@@ -117,7 +117,7 @@ function Footer({ spotify }) {
       <div className="footer__right">
         <QueueMusicRoundedIcon style={{ fontSize: 24 }}/>
         <VolumeDownRoundedIcon style={{ fontSize: 24 }}/>
-        <Slider aria-labelledby="continuous-slider" />
+        <Slider className="footer__slider" aria-labelledby="continuous-slider" />
       </div>
     </div>
   );

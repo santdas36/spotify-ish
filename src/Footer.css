@@ -19,7 +19,7 @@
   margin: 0;
 }
 .footer__right .MuiSlider-root {
-  color: green !important;
+  color: #1ED760 !important;
 }
 .footer__left {
   display: flex;
@@ -59,4 +59,8 @@
   width: 60px;
   object-fit: contain;
   margin-right: 1rem;
+}
+.footer__slider {
+  max-width: 180px;
+  margin-left: 1rem;
 }
