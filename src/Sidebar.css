@@ -13,7 +13,7 @@
 }
 
 .sidebar__items {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 .sidebar__title {
@@ -28,4 +28,5 @@
 .sidebar > hr {
   border: 1px solid #4a4a4a;
   width: 100%;
+  margin: 0 0 0 0.5rem;
 }
