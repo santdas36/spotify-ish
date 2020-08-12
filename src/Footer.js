@@ -101,12 +101,14 @@ function Footer({ spotify }) {
         {playing ? (
           <PauseRoundedIcon
             onClick={handlePlayPause}
-            className="footer__iconPlay"
+            className="footer__icon"
+            fontSize="large"
           />
         ) : (
           <PlayArrowRoundedIcon
             onClick={handlePlayPause}
-            className="footer__iconPlay"
+            className="footer__icon"
+            fontSize="large"
           />
         )}
         <SkipNextRoundedIcon onClick={skipNext} className="footer__icon" />

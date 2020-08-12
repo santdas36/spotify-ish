@@ -40,12 +40,8 @@
   justify-content: center;
 }
 
-.footer__icon .MuiSvgIcon-root {
-  height: 24px !important;
-  transition: transform 0.2s ease-in-out;
-}
-.footer__iconPlay .MuiSvgIcon-root {
-  height: 48px !important;
+.footer__icon {
+  font-size: 1.5rem !important;
   transition: transform 0.2s ease-in-out;
 }
 
