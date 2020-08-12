@@ -6,14 +6,23 @@
 }
 
 .login > img {
-  height: 200px;
+  width: 80%;
+  max-width: 400px;
 }
 
 .login > a {
   color: white;
   text-decoration: none;
-  padding: 20px;
-  border-radius: 99px;
+  padding: 1rem 2rem;
+  border-radius: 5rem;
   font-weight: 800;
-  background-color: #1db954;
+  background-color: #1ED760;
+}
+
+@media (max-width: 480px) {
+  .login > a {
+    display: block;
+    width: 80%;
+    text-align: center;
+  }
 }

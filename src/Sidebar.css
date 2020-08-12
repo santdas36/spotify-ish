@@ -8,6 +8,11 @@
   height: 100vh;
   color: white;
   background-color: #040404;
+  overflow-y: scroll;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
 }
 
 .sidebar__title {

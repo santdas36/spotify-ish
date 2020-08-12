@@ -6,7 +6,7 @@ import { getTokenFromResponse } from "./spotify";
 import "./App.css";
 import Login from "./Login";
 
-const s = new SpotifyWebApi();
+const spotifyApi = new SpotifyWebApi();
 
 function App() {
   const [{ token }, dispatch] = useStateValue();
@@ -18,7 +18,7 @@ function App() {
     let _token = hash.access_token;
 
     if (_token) {
-      s.setAccessToken(_token);
+      spotifyApi.setAccessToken(_token);
 
       dispatch({
         type: "SET_TOKEN",
@@ -33,21 +33,21 @@ function App() {
 		}
 	  };
 	  
-	  const getDiscoverWeekly = async () => {
+     const getDiscoverWeekly = async () => {
          await fetch(discoverApi, headers)
-          .then((response) => console.log('here >>>', response))
-        };
+          .then((response) => console.log('here >>>', response)) //401: unauthorized, duh
+      };
 
-        getDiscoverWeekly();
+      getDiscoverWeekly();
     
-        s.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) =>
+      spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) =>
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
         })
       );
 
-      s.getMyTopArtists().then((response) =>
+      spotifyApi.getMyTopArtists().then((response) =>
         dispatch({
           type: "SET_TOP_ARTISTS",
           top_artists: response,
@@ -59,7 +59,7 @@ function App() {
         spotify: s,
       });
 
-      s.getMe().then((user) => {
+      spotifyApi.getMe().then((user) => {
         console.log(user);
         dispatch({
           type: "SET_USER",
@@ -67,7 +67,7 @@ function App() {
         });
       });
 
-      s.getUserPlaylists().then((playlists) => {
+      spotifyApi.getUserPlaylists().then((playlists) => {
         dispatch({
           type: "SET_PLAYLISTS",
           playlists,
