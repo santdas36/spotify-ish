@@ -56,7 +56,7 @@ function App() {
 
       dispatch({
         type: "SET_SPOTIFY",
-        spotify: s,
+        spotify: spotifyApi,
       });
 
       spotifyApi.getMe().then((user) => {
@@ -79,7 +79,7 @@ function App() {
   return (
     <div className="app">
       {!token && <Login />}
-      {token && <Player spotify={s} />}
+      {token && <Player spotify={spotifyApi} />}
     </div>
   );
 }
