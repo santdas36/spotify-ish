@@ -29,14 +29,14 @@ function App() {
       const headers =  {
 		method: "GET",
 		headers: {
-		"Authorization": `Bearer  ${_token}`
+		'Authorization': 'Bearer ' + _token
 		}
 	  };
 	  
 	  const getDiscoverWeekly = async () => {
          await fetch(discoverApi, headers)
           .then((response) => response.json())
-          .then(data =>{console.log(data)})
+          .then(data =>{console.log('here >>>', data)})
         };
 
         getDiscoverWeekly();
