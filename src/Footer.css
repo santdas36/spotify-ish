@@ -25,7 +25,6 @@
   display: flex;
   align-items: center;
   color: white;
-  max-width: 360px;
   flex: 0.3;
   overflow-x: hidden;
   text-overflow: ellipsis;
@@ -33,7 +32,6 @@
 
 .footer__center {
   flex: 0 0 40%;
-  max-width: 300px;
   color: white;
   display: flex;
   align-items: center;
@@ -54,7 +52,6 @@
   align-items: center;
   color: white;
   flex: 0.3;
-  max-width: 360px;
 }
 
 .footer__albumArt {
