@@ -36,7 +36,7 @@ function App() {
 	  const getDiscoverWeekly = async () => {
          await fetch(discoverApi, headers)
           .then((response) => response.json())
-          .then(console.log(data))
+          .then(data =>{console.log(data)})
         };
 
         getDiscoverWeekly();
