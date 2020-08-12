@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => { 
     const script = document.createElement('script');
-    script.src = "/path/to/resource.js";
+    script.src = "https://cdn.jsdelivr.net/npm/eruda@2.3.3/eruda.min.js";
     script.async = true;
     document.body.appendChild(script);
     return () => { 
