@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useStateValue } from "./StateProvider";
-import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
-import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
-import SkipNextIcon from "@material-ui/icons/SkipNext";
-import ShuffleIcon from "@material-ui/icons/Shuffle";
-import RepeatIcon from "@material-ui/icons/Repeat";
-import VolumeDownIcon from "@material-ui/icons/VolumeDown";
-import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
-import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
+import PlayArrowRoundedIcon from "@material-ui/icons/PlayArrowRounded";
+import SkipPreviousRoundedIcon from "@material-ui/icons/SkipPreviousRounded";
+import SkipNextRoundedIcon from "@material-ui/icons/SkipNextRounded";
+import ShuffleRoundedIcon from "@material-ui/icons/ShuffleRounded";
+import RepeatRoundedIcon from "@material-ui/icons/RepeatRounded";
+import VolumeDownRoundedIcon from "@material-ui/icons/VolumeDownRounded";
+import PauseRoundedIcon from "@material-ui/icons/PauseRounded";
+import QueueMusicRoundedIcon from "@material-ui/icons/QueueMusicRounded";
 import "./Footer.css";
-import { Grid, Slider } from "@material-ui/core";
+import { Slider } from "@material-ui/core";
 
 function Footer({ spotify }) {
   const [{ token, item, playing }, dispatch] = useStateValue();
@@ -89,43 +89,33 @@ function Footer({ spotify }) {
           </div>
         ) : (
           <div className="footer__songInfo">
-            <h4>No song is playing</h4>
-            <p>...</p>
+            <h4>Select a song to start playing...</h4>
+            <p>You must have a Premium subscriotion to play songs</p>
           </div>
         )}
       </div>
 
       <div className="footer__center">
-        <ShuffleIcon className="footer__green" />
-        <SkipPreviousIcon onClick={skipNext} className="footer__icon" />
+        <ShuffleRoundedIcon className="footer__icon" />
+        <SkipPreviousRoundedIcon onClick={skipPrevious} className="footer__icon" />
         {playing ? (
-          <PauseCircleOutlineIcon
+          <PauseRoundedIcon
             onClick={handlePlayPause}
-            fontSize="large"
-            className="footer__icon"
+            className="footer__icon footer__icon-play"
           />
         ) : (
-          <PlayCircleOutlineIcon
+          <PlayArrowRoundedIcon
             onClick={handlePlayPause}
-            fontSize="large"
-            className="footer__icon"
+            className="footer__icon footer__icon-play"
           />
         )}
-        <SkipNextIcon onClick={skipPrevious} className="footer__icon" />
-        <RepeatIcon className="footer__green" />
+        <SkipNextIcon onClick={skipNext} className="footer__icon" />
+        <RepeatRoundedIcon className="footer__icon" />
       </div>
       <div className="footer__right">
-        <Grid container spacing={2}>
-          <Grid item>
-            <PlaylistPlayIcon />
-          </Grid>
-          <Grid item>
-            <VolumeDownIcon />
-          </Grid>
-          <Grid item xs>
-            <Slider aria-labelledby="continuous-slider" />
-          </Grid>
-        </Grid>
+        <QueueMusicRoundedIcon />
+        <VolumeDownRoundedIcon />
+        <Slider aria-labelledby="continuous-slider" />
       </div>
     </div>
   );
