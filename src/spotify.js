@@ -7,7 +7,7 @@ const scopes = [
   "user-read-playback-state",
   "user-top-read",
   "user-modify-playback-state",
-  "user-read-private",
+  "playlist-read-private",
 ];
 
 export const getTokenFromResponse = () => {
