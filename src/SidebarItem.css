@@ -1,20 +1,14 @@
-.SidebarItem {
+.sidebarItem {
   display: flex;
   cursor: pointer;
   align-items: center;
-  height: 40px;
+  padding: 0.5rem 0;
   color: grey;
   transition: 200ms color ease-in;
 }
 
-.SidebarItem:hover {
+.sidebarItem:hover {
   color: white;
-}
-
-.sidebar > hr {
-  border: 1px solid #282828;
-  width: 100%;
-  margin: 0 1rem 1rem 1rem;
 }
 
 .SidebarItem__icon {
@@ -25,7 +19,4 @@
 
 .SidebarItem > h4 {
   font-size: 1.2rem;
-}
-.SidebarItem > p {
-  padding: 0.5rem 0;
 }

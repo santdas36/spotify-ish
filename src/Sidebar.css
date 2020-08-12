@@ -1,8 +1,6 @@
 .sidebar {
-  display: flex;
-  flex-direction: column;
   flex: 0.25;
-  padding: 1rem;
+  padding: 2rem;
   min-width: 250px;
   height: calc(100vh - 6rem);
   color: white;
@@ -20,4 +18,10 @@
 
 .sidebar__logo {
   height: 2.5rem;
+}
+
+.sidebar > hr {
+  border: 1px solid #282828;
+  width: calc(100% - 2rem);
+  margin: 0 1rem 1rem 1rem;
 }
