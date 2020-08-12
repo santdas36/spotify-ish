@@ -32,7 +32,7 @@
 }
 
 .footer__center {
-  flex: 0.4;
+  flex: 0 0 40%;
   max-width: 300px;
   color: white;
   display: flex;
