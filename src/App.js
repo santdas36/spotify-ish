@@ -5,13 +5,22 @@ import Player from "./Player";
 import { getTokenFromResponse } from "./spotify";
 import "./App.css";
 import Login from "./Login";
-import "node_modules/eruda/eruda.js";
-eruda.init();
 
 const s = new SpotifyWebApi();
 
 function App() {
   const [{ token }, dispatch] = useStateValue();
+
+  useEffect(() => { 
+    const script = document.createElement('script');
+    script.src = "/path/to/resource.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => { 
+      document.body.removeChild(script); }
+  }, []);
+
+  eruda.init();
 
   useEffect(() => {
 
