@@ -1,7 +1,7 @@
 import React from "react";
 import "./Sidebar.css";
 import logoWhite from "./assets/spotify_white.svg"
-import SidebarOption from "./SidebarOption";
+import SidebarItem from "./SidebarItem";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
@@ -16,15 +16,15 @@ function Sidebar() {
     <div className="sidebar">
       <img className="sidebar__logo" src={logoWhite} alt="spotify logo" />
       <div className="sidebar__options">
-        <SidebarOption Icon={HomeIcon} option="Home" />
-        <SidebarOption Icon={SearchIcon} option="Search" />
-        <SidebarOption Icon={LibraryMusicIcon} option="Your Library" />
+        <SidebarItem Icon={HomeIcon} option="Home" />
+        <SidebarItem Icon={SearchIcon} option="Search" />
+        <SidebarItem Icon={LibraryMusicIcon} option="Your Library" />
       </div>
       
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
       {playlists?.items?.map((playlist) => (
-        <SidebarOption option={playlist.name} />
+        <SidebarItem option={playlist.name} />
       ))}
     </div>
   );

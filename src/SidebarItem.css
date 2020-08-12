@@ -1,4 +1,4 @@
-.sidebarOption {
+.SidebarItem {
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -7,7 +7,7 @@
   transition: 200ms color ease-in;
 }
 
-.sidebarOption:hover {
+.SidebarItem:hover {
   color: white;
 }
 
@@ -17,15 +17,15 @@
   margin: 0 1rem 1rem 1rem;
 }
 
-.sidebarOption__icon {
+.SidebarItem__icon {
   margin-right: 1rem;
   font-size: 1.2rem;
 }
 
 
-.sidebarOption > h4 {
+.SidebarItem > h4 {
   font-size: 1.2rem;
 }
-.sidebarOption > p {
+.SidebarItem > p {
   padding: 0.5rem 0;
 }
