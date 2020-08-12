@@ -13,17 +13,19 @@
 
 .sidebar > hr {
   border: 1px solid #282828;
-  width: 90%;
-  margin: 10px auto;
+  width: 100%;
+  margin: 0 1rem 1rem 1rem;
 }
 
 .sidebarOption__icon {
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-right: 1rem;
+  font-size: 1.2rem;
 }
 
+
+.sidebarOption > h4 {
+  font-size: 1.2rem;
+}
 .sidebarOption > p {
-  margin-top: 10px;
-  margin-left: 20px;
-  font-size: 14px;
+  padding: 0.5rem 0;
 }
