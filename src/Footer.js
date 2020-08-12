@@ -78,7 +78,7 @@ function Footer({ spotify }) {
     <div className="footer">
       <div className="footer__left">
         <img
-          className="footer__albumLogo"
+          className="footer__albumArt"
           src={item?.album.images[0].url}
           alt={item?.name}
         />

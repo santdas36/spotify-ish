@@ -59,10 +59,9 @@
   flex: 0.3;
 }
 
-.footer__albumLogo {
-  height: 2.75rem;
-  width: 2.75rem;
-  margin-top: -0.25rem;
+.footer__albumArt {
+  height: 4rem;
+  width: 4rem;
   object-fit: contain;
 }
 
