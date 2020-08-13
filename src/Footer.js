@@ -8,6 +8,7 @@ import RepeatRoundedIcon from "@material-ui/icons/RepeatRounded";
 import VolumeDownRoundedIcon from "@material-ui/icons/VolumeDownRounded";
 import PauseRoundedIcon from "@material-ui/icons/PauseRounded";
 import QueueMusicRoundedIcon from "@material-ui/icons/QueueMusicRounded";
+import AlbumDefault from "./assets/defaultAlbumArt.jpg"
 import "./Footer.css";
 import { Slider } from "@material-ui/core";
 
@@ -79,7 +80,7 @@ function Footer({ spotify }) {
       <div className="footer__left">
         <img
           className="footer__albumArt"
-          src={item?.album.images[0].url}
+          src={item ? item.album.images[0].url : AlbumDefault}
           alt={item?.name}
         />
         {item ? (
