@@ -7,7 +7,6 @@ import { useEffect } from "react";
 
 function Header({ spotify }) {
   const [{ user }, dispatch] = useStateValue();
-  const [{ token }, dispatch] = useStateValue();
   const logout = () => {
     dispatch({
       type: "SET_TOKEN",
