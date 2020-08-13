@@ -16,10 +16,10 @@ function App() {
     const hash = getTokenFromResponse();
     window.location = "";
     let _token = hash.access_token;
-    if ( var sessionToken = sessionStorage.getItem('token')) {
-      spotifyApi.setAccessToken(sessionToken);
-      console.log(spotifyApi.getAccessToken());
-    }
+    let sessionToken = sessionStorage.getItem('token');
+    spotifyApi.setAccessToken(sessionToken);
+    console.log(spotifyApi.getAccessToken());
+    
     if (_token) {
       spotifyApi.setAccessToken(_token);
       sessionStorage.setItem( 'token', _token );
