@@ -50,6 +50,7 @@
   margin-right: 1rem;
 }
 
-.header__avatar {
-  height: 2.75rem;
+.header__avatar > .MuiAvatar-root {
+  height: 60px !important;
+  width: 60px !important;
 }

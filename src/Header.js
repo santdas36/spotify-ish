@@ -1,9 +1,9 @@
 import React from "react";
-import "./Header.css";
 import { useStateValue } from "./StateProvider";
 import { Avatar } from "@material-ui/core";
 import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import { useEffect } from "react";
+import "./Header.css";
 
 function Header({ spotify }) {
   const [{ user }, dispatch] = useStateValue();
