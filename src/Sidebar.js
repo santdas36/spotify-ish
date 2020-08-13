@@ -9,7 +9,7 @@ import { useStateValue } from "./StateProvider";
 
 
 function Sidebar ({spotify}) {
-  const [dispatch] = useStateValue();
+  const [{ playlists }, dispatch] = useStateValue();
   
   const handlePlaylistChange = (id) => {
     spotify.getPlaylist(id).then((response) =>
