@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css";
 import { useStateValue } from "./StateProvider";
 import { Avatar } from "@material-ui/core";
-import SearchIcon from "@material-ui/icons/Search";
+import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
 import { useEffect } from "react";
 
 function Header({ spotify }) {
@@ -11,7 +11,7 @@ function Header({ spotify }) {
   return (
     <div className="header">
       <div className="header__left">
-        <SearchIcon />
+        <SearchRoundedIcon />
         <input
           placeholder="Search for Artists, Songs, or Podcasts "
           type="text"

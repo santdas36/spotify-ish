@@ -3,8 +3,8 @@ import "./Main.css";
 import Header from "./Header";
 import { useStateValue } from "./StateProvider";
 import SongRow from "./SongRow";
-import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
-import FavoriteIcon from "@material-ui/icons/Favorite";
+import PlayCircleFilledRoundedIcon from "@material-ui/icons/PlayCircleFilledRounded";
+import FavoriteRoundedIcon from "@material-ui/icons/FavoriteRounded";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 function Main ({ spotify }) {
