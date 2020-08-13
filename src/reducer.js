@@ -1,5 +1,5 @@
 import { findAllByDisplayValue } from "@testing-library/react";
-var sessionToken = sessionStorage.getItem( 'token' );
+export var sessionToken = sessionStorage.getItem( 'token' );
 
 export const initialState = {
   user: null,
