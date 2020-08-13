@@ -24,7 +24,7 @@ function Header({ spotify }) {
         />
       </div>
       <div className="header__right">
-        <div>
+        <div className="header__rightText">
           <h4 className="header__username">{user?.display_name}</h4>
           <small onClick={logout}>Log Out</small>
         </div>

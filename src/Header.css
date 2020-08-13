@@ -30,12 +30,22 @@
   text-overflow: ellipsis;
 }
 
-.header__right > h4 {
+.header__rightText > h4 {
   margin: 0;
-  margin-right: 1rem;
-  font-size: 1rem;
+  margin-bottom: 5rem;
+  font-size: 16px;
   font-weight: 700;
   opacity: 0.8;
+}
+.header__rightText > small {
+  font-size: 12px;
+  margin: 0;
+}
+.header__rightText {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 1rem;
 }
 
 .header__avatar {
