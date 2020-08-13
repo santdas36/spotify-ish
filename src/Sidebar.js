@@ -5,13 +5,11 @@ import SidebarItem from "./SidebarItem";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
-import { getTokenFromResponse } from "./spotify";
 import { useStateValue } from "./StateProvider";
 
 
 function Sidebar ({spotify}) {
-  const [{ playlists }, { discover_weekly }, dispatch] = useStateValue();
-  console.log(playlists);
+  const [dispatch] = useStateValue();
   
   const handlePlaylistChange = (id) => {
     spotify.getPlaylist(id).then((response) =>
