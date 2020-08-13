@@ -32,6 +32,9 @@
   margin: 0;
   color: gray;
 }
+.songRow__albumName {
+  font-weight: 700;
+}
 
 .songRow__albumArt {
   height: 60px;
