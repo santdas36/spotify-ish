@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     
-    spotifyApi.setAccessToken(sessiontoken);
+    spotifyApi.setAccessToken(sessionToken);
     
     const hash = getTokenFromResponse();
     window.location.hash = "";
