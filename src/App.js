@@ -5,7 +5,6 @@ import Player from "./Player";
 import { getTokenFromResponse } from "./spotify";
 import "./App.css";
 import Login from "./Login";
-import sessionToken from "./reducer";
 
 const spotifyApi = new SpotifyWebApi();
 
@@ -14,10 +13,8 @@ function App() {
 
   useEffect(() => {
     
-    spotifyApi.setAccessToken(sessionToken);
-    
     const hash = getTokenFromResponse();
-    window.location.hash = "";
+    window.location = "";
     let _token = hash.access_token;
 
     if (_token) {
