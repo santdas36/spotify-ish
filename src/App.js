@@ -40,12 +40,6 @@ function App() {
 
       getDiscoverWeekly();
     
-      spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) =>
-        dispatch({
-          type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
-        })
-      );
 
       spotifyApi.getMyTopArtists().then((response) =>
         dispatch({
@@ -68,7 +62,11 @@ function App() {
       });
 
       spotifyApi.getUserPlaylists().then((playlists) => {
-        console.log(playlists);
+
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: playlists.items[0]
+        })
         dispatch({
           type: "SET_PLAYLISTS",
           playlists,
