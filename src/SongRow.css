@@ -21,14 +21,14 @@
 
 .songRow__info > h1 {
   font-size: 1rem;
-  line-height: 1.25;
+  line-height: 1.2;
   margin: 0;
   margin-bottom: 0.5rem;
 }
 
 .songRow__info > p {
   font-size: 0.8rem;
-  line-height: 1.25;
+  line-height: 1;
   margin: 0;
 }
 
