@@ -8,7 +8,7 @@ import RepeatRoundedIcon from "@material-ui/icons/RepeatRounded";
 import VolumeDownRoundedIcon from "@material-ui/icons/VolumeDownRounded";
 import PauseRoundedIcon from "@material-ui/icons/PauseRounded";
 import QueueMusicRoundedIcon from "@material-ui/icons/QueueMusicRounded";
-import AlbumDefault from "./assets/defaultAlbumArt.jpg"
+import AlbumDefault from "./assets/defaultAlbumArt.png"
 import "./Footer.css";
 import { Slider } from "@material-ui/core";
 
