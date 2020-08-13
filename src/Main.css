@@ -61,4 +61,9 @@
 .main__headerText > p {
   font-size: 16px;
   margin: 0;
+  color: #9a9a9a;
+}
+
+.main__headerText strong {
+  font-size: 0.8rem;
 }
