@@ -32,9 +32,9 @@
   margin: 0;
 }
 
-.songRow__albumName {
+.songRow__artists {
   font-weight: 700;
-  color: #ccc;
+  color: #ddd;
 }
 
 .songRow__albumName {
@@ -54,5 +54,5 @@
 }
 
 .songRow__favorite {
-  padding-right: 2rem;
+  margin-right: 2rem;
 }

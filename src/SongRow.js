@@ -11,9 +11,8 @@ function SongRow({ track, playSong }) {
         <div className="songRow__info">
           <h1>{track.name}</h1>
           <p>
-            <span className="songRow__albumName">{track.album.name}</span>
-            <span className="songRow__artists">{" - "}{track.artists.map((artist) => artist.name).join(", ")}
-          </span>
+            <span className="songRow__artists">{track.artists.map((artist) => artist.name).join(", ")}</span>
+            <span className="songRow__albumName">{" - "}{track.album.name}</span>
           </p>
         </div>
       </div>
