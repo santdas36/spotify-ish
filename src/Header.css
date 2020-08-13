@@ -44,8 +44,8 @@
 .header__rightText {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-end;
+  justify-content: center;
   margin-right: 1rem;
 }
 
