@@ -15,7 +15,7 @@ function SongRow({ track, playSong }) {
           </p>
         </div>
       </div>
-      <FavoriteBorderRoundedIcon className="songRow_favorite"/>
+      <FavoriteBorderRoundedIcon className="songRow__favorite"/>
     </div>
   );
 }
