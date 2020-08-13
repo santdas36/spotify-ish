@@ -26,6 +26,9 @@
   outline: none !important;
   padding: 0.25rem 0.5rem;
 }
+.header__left > input::placeholder {
+  text-overflow: ellipsis;
+}
 
 .header__right > h4 {
   margin: 0;
