@@ -33,7 +33,7 @@ function Sidebar ({spotify}) {
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
       {playlists?.items?.map((playlist) => (
-        <SidebarItem option={playlist.name} onClick={() => handlePlaylistChange(playlist.id)} />
+        <SidebarItem option={playlist} handlePlaylistChange={handlePlaylistChange} />
       ))}
     </div>
   );
