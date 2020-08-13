@@ -1,6 +1,5 @@
 .songRow {
-  margin-left: 20px;
-  padding: 20px;
+  padding: 0.75rem;
   display: flex;
   align-items: center;
   z-index: 100;
@@ -14,20 +13,22 @@
 }
 
 .songRow__info {
-  margin-left: 20px;
+  margin-left: 1rem;
 }
 
 .songRow__info > h1 {
-  font-size: 16px;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
 }
 
 .songRow__info > p {
-  font-size: 14px;
-  margin-top: 3px;
+  font-size: 0.8rem;
+  margin: 0;
   color: gray;
 }
 
-.songRow__album {
-  height: 40px;
-  width: 40px;
+.songRow__albumArt {
+  height: 60px;
+  width: 60px;
 }
