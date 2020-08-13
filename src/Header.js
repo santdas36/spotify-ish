@@ -7,6 +7,13 @@ import { useEffect } from "react";
 
 function Header({ spotify }) {
   const [{ user }, dispatch] = useStateValue();
+  const [{ token }, dispatch] = useStateValue();
+  const logout = () => {
+    dispatch({
+      type: "SET_TOKEN",
+      token: null
+    })
+  }
 
   return (
     <div className="header">
@@ -18,7 +25,10 @@ function Header({ spotify }) {
         />
       </div>
       <div className="header__right">
-        <h4 className="header__username">{user?.display_name}</h4>
+        <div>
+          <h4 className="header__username">{user?.display_name}</h4>
+          <small onClick={logout}>Log Out</small>
+        </div>
         <Avatar className="header__avatar" alt={user?.display_name} src={user?.images[0]?.url} />
       </div>
     </div>
