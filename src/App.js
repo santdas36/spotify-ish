@@ -16,7 +16,7 @@ function App() {
     const hash = getTokenFromResponse();
     window.location = "";
     let _token = hash.access_token;
-    if (sessionToken = sessionStorage.getItem('token')) {
+    if ( var sessionToken = sessionStorage.getItem('token')) {
       spotifyApi.setAccessToken(sessionToken);
       console.log(spotifyApi.getAccessToken());
     }
