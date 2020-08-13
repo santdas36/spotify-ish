@@ -150,13 +150,13 @@ function Footer({ spotify }) {
           <RepeatOneRoundedIcon
             onClick={handleRepeat}
             className="footer__icon  footer__iconGreen"
-            style={{ fontSize: 24 }} 
+            style={{ fontSize: 28 }} 
           />
         ) : (
           <RepeatRoundedIcon
             onClick={handleRepeat}
             className="footer__icon"
-            style={{ fontSize: 24 }}
+            style={{ fontSize: 28 }}
           />
         )}
       </div>
