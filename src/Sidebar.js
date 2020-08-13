@@ -12,13 +12,13 @@ function Sidebar ({spotify}) {
   const [{ playlists }, dispatch] = useStateValue();
   
   const handlePlaylistChange = (id) => {
-    spotify.getPlaylist(id).then((response) =>
+    spotify.getPlaylist(id).then((response) => {
       console.log(response);
       dispatch({
         type: "SET_DISCOVER_WEEKLY",
         discover_weekly: response,
-      })
-    );
+      });
+    });
   }
   
   return (
