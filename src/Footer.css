@@ -20,7 +20,7 @@
   margin: 0;
 }
 .footer__right .MuiSlider-root {
-  color: #1ED760 !important;
+  color: #09C14B !important;
 }
 .footer__left {
   display: flex;
@@ -45,7 +45,7 @@
 }
 
 .footer__iconGreen {
-  color: #1ED760 !important;
+  color: #09C14B !important;
 }
 
 .footer__icon:hover {
