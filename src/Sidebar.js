@@ -8,20 +8,19 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { getTokenFromResponse } from "./spotify";
 import { useStateValue } from "./StateProvider";
 
-function handlePlaylistChange = (id) => {
-  const [{ discover_weekly }, dispatch] = useStateValue();
+
+function Sidebar() {
+  const [{ playlists }, { discover_weekly }, dispatch] = useStateValue();
+  console.log(playlists);
   
-  spotifyApi.getPlaylist(id).then((response) =>
+  const handlePlaylistChange = (id) => {
+    spotifyApi.getPlaylist(id).then((response) =>
       dispatch({
         type: "SET_DISCOVER_WEEKLY",
         discover_weekly: response,
       })
     );
-}
-
-function Sidebar() {
-  const [{ playlists }, dispatch] = useStateValue();
-  console.log(playlists);
+  }
   
   return (
     <div className="sidebar">
