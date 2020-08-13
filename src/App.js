@@ -64,12 +64,12 @@ function App() {
           type: "SET_PLAYLISTS",
           playlists,
         });
-    //  });
-      
-    //  spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) => {
+        let playlistTop = playlists.items[0].id;
+        spotifyApi.getPlaylist(playlistTop).then((response) => {
+          console.log("currPlaylist >>>",response);
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: playlists.items[0]
+          discover_weekly: response,
         });
       });
     }
