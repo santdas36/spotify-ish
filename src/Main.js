@@ -67,8 +67,8 @@ function Main ({ spotify }) {
             className="main__playButton"
             onClick={playPlaylist(discover_weekly?.id)}
           />
-          <FavoriteRoundedIcon fontSize="large" />
-          <MoreHorizIcon />
+          <FavoriteRoundedIcon style={{fontSize: 32}} />
+          <MoreHorizIcon style={{fontSize: 32}}/>
         </div>
 
         {discover_weekly?.tracks.items.map((item) => (

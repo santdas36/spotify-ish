@@ -18,13 +18,14 @@
   padding: 2rem;
 }
 
-.main__playButton {
-  font-size: 72px !important;
-}
-
 .main__icons {
   display: flex;
   align-items: center;
+  padding: 0 2rem;
+}
+
+.main__playButton {
+  font-size: 64px !important;
 }
 
 .main__icons > .MuiSvgIcon-root {
@@ -41,10 +42,10 @@
 }
 
 .main__header > img {
-  min-height: 192px;
-  height: 20vh;
+  min-width: 192px;
+  width: 20vw;
   margin-right: 1rem;
-  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
 }
 
 .main__headerText {
@@ -61,9 +62,11 @@
 .main__headerText > p {
   font-size: 16px;
   margin: 0;
-  color: #9a9a9a;
+  color: #acacac;
+  max-width: 540px;
 }
 
 .main__headerText strong {
   font-size: 0.8rem;
+  color: #9a9a9a;
 }
