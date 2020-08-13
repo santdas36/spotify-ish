@@ -9,12 +9,12 @@ import { getTokenFromResponse } from "./spotify";
 import { useStateValue } from "./StateProvider";
 
 
-function Sidebar() {
+function Sidebar ({spotify}) {
   const [{ playlists }, { discover_weekly }, dispatch] = useStateValue();
   console.log(playlists);
   
   const handlePlaylistChange = (id) => {
-    spotifyApi.getPlaylist(id).then((response) =>
+    spotify.getPlaylist(id).then((response) =>
       dispatch({
         type: "SET_DISCOVER_WEEKLY",
         discover_weekly: response,
