@@ -36,6 +36,7 @@
 .songRow__albumArt {
   height: 60px;
   width: 60px;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
 }
 
 .songRow__song {
