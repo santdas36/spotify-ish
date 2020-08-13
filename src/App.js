@@ -9,7 +9,7 @@ import Login from "./Login";
 const spotifyApi = new SpotifyWebApi();
 
 function App() {
-  const [{ token }, dispatch] = useStateValue();
+  const [{ token }, { playlists }, dispatch] = useStateValue();
 
   useEffect(() => {
     
@@ -63,15 +63,17 @@ function App() {
 
       spotifyApi.getUserPlaylists().then((playlists) => {
         dispatch({
-          type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: playlists.items[0]
-        });
-        
-        dispatch({
           type: "SET_PLAYLISTS",
           playlists,
         });
       });
+      
+      spotifyApi.getPlaylist(playlists?.item[0].id).then((response) => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        })
+      })
     }
   }, [token, dispatch]);
 
