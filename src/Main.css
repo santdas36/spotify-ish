@@ -41,7 +41,7 @@
 }
 
 .main__header > img {
-  min-height: 120px;
+  min-height: 192px;
   height: 20vh;
   margin-right: 1rem;
   box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.5);
@@ -52,13 +52,13 @@
 }
 
 .main__headerText > h2 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 30px;
+  margin-bottom: 0.5rem;
   font-weight: 900;
   line-height: 1.25;
 }
 
 .main__headerText > p {
-  font-size: 1.2rem;
+  font-size: 16px;
   margin: 0;
 }

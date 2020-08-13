@@ -13,7 +13,7 @@
   flex: 0.5;
   display: flex;
   background-color: white;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 30px;
   color: gray;
   align-items: center;
@@ -27,5 +27,8 @@
 }
 
 .header__right > h4 {
-  margin-left: 10px;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
 }
