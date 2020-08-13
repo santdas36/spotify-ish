@@ -2,6 +2,7 @@
   padding: 0.75rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   z-index: 100;
   color: white;
   margin-left: 1.25rem;
@@ -35,4 +36,13 @@
 .songRow__albumArt {
   height: 60px;
   width: 60px;
+}
+
+.songRow__song {
+  display: flex;
+  align-items: center;
+}
+
+.songRow__favorite {
+  margin-right: 2rem;
 }
