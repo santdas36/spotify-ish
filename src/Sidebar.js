@@ -2,9 +2,9 @@ import React from "react";
 import "./Sidebar.css";
 import logoWhite from "./assets/spotify_white.svg"
 import SidebarItem from "./SidebarItem";
-import HomeIcon from "@material-ui/icons/Home";
-import SearchIcon from "@material-ui/icons/Search";
-import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import SearchRoundedIcon from "@material-ui/icons/SearchRounded";
+import LibraryMusicRoundedIcon from "@material-ui/icons/LibraryMusicRounded";
 import { useStateValue } from "./StateProvider";
 
 
@@ -25,9 +25,9 @@ function Sidebar ({spotify}) {
     <div className="sidebar">
       <img className="sidebar__logo" src={logoWhite} alt="spotify logo" />
       <div className="sidebar__items">
-        <SidebarItem Icon={HomeIcon} option="Home" />
-        <SidebarItem Icon={SearchIcon} option="Search" />
-        <SidebarItem Icon={LibraryMusicIcon} className="sidebar__icons-library" option="Your Library" />
+        <SidebarItem Icon={HomeRoundedIcon} option="Home" />
+        <SidebarItem Icon={SearchRoundedIcon} option="Search" />
+        <SidebarItem Icon={LibraryMusicRoundedIcon} className="sidebar__icons-library" option="Your Library" />
       </div>
       
       <strong className="sidebar__title">PLAYLISTS</strong>
