@@ -50,40 +50,32 @@ function Footer({ spotify }) {
   
   const handleRepeat = () => {
     if (repeat) {
-      spotify.setRepeat("off").then((r) => {
-        console.log(r);
-        dispatch({
-          type: "SET_REPEAT",
-          repeat: false,
-        })
+      spotify.setRepeat("off");
+      dispatch({
+       type: "SET_REPEAT",
+        repeat: false,
       });
     } else {
-      spotify.setRepeat("track").then((r) => {
-        console.log(r);
-        dispatch({
-          type: "SET_REPEAT",
-          repeat: true,
-        })
+      spotify.setRepeat("track");
+      dispatch({
+        type: "SET_REPEAT",
+        repeat: true,
       });
     }
   }
   
   const handleShuffle = () => {
     if (shuffle) {
-      spotify.setShuffle(false).then((s) => {
-        console.log(s);
-        dispatch({
-          type: "SET_SHUFFLE",
-          shuffle: false,
-        })
+      spotify.setShuffle(false);
+      dispatch({
+        type: "SET_SHUFFLE",
+        shuffle: false,
       });
     } else {
-      spotify.setShuffle(true).then((s) => {
-        console.log(s);
-        dispatch({
-          type: "SET_SHUFFLE",
-          shuffle: true,
-        })
+      spotify.setShuffle(true);
+      dispatch({
+        type: "SET_SHUFFLE",
+        shuffle: true,
       });
     }
   }
