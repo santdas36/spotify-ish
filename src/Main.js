@@ -72,7 +72,7 @@ function Main ({ spotify }) {
         </div>
 
         {discover_weekly?.tracks.items.map((item) => (
-          <SongRow playSong={playSong} track={item.track} />
+          item.track && <SongRow playSong={playSong} track={item.track} />
         ))}
       </div>
     </div>
