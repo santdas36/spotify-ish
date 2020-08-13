@@ -50,14 +50,16 @@ function Footer({ spotify }) {
   
   const handleRepeat = () => {
     if (repeat) {
-      spotify.setRepeat("off").then(() => {
+      spotify.setRepeat("off").then((r) => {
+        console.log(r);
         dispatch({
           type: "SET_REPEAT",
           repeat: false,
         })
       });
     } else {
-      spotify.setRepeat("track").then(() => {
+      spotify.setRepeat("track").then((r) => {
+        console.log(r);
         dispatch({
           type: "SET_REPEAT",
           repeat: true,
@@ -68,14 +70,16 @@ function Footer({ spotify }) {
   
   const handleShuffle = () => {
     if (shuffle) {
-      spotify.setShuffle(false).then(() => {
+      spotify.setShuffle(false).then((s) => {
+        console.log(s);
         dispatch({
           type: "SET_SHUFFLE",
           shuffle: false,
         })
       });
     } else {
-      spotify.setShuffle(true).then(() => {
+      spotify.setShuffle(true).then((s) => {
+        console.log(s);
         dispatch({
           type: "SET_SHUFFLE",
           shuffle: true,
@@ -134,7 +138,7 @@ function Footer({ spotify }) {
       </div>
 
       <div className="footer__center">
-        <ShuffleRoundedIcon onClick={handleShuffle} className={ shuffle ? "footer_iconGreen" : "footer__icon  footer__iconGreen" } style={{ fontSize: 24 }} />
+        <ShuffleRoundedIcon onClick={handleShuffle} className={ shuffle ? "footer__iconGreen footer__icon" : "footer__icon" } style={{ fontSize: 24 }} />
         <SkipPreviousRoundedIcon onClick={skipPrevious} className="footer__icon" style={{ fontSize: 32 }}  />
         {playing ? (
           <PauseRoundedIcon
