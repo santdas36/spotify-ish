@@ -13,12 +13,12 @@
 
 .sidebarItem__icon {
   margin-right: 1rem;
-  font-size: 1rem !important;
+  font-size: 1.25rem !important;
 }
 
 
 .sidebarItem > h4 {
-  font-size: 1rem;
+  font-size: 1.15rem;
   margin: 0;
   line-height: 1.25;
 }
