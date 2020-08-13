@@ -7,6 +7,8 @@ export const initialState = {
   discover_weekly: null,
   top_artists: null,
   playing: false,
+  shuffle: false,
+  repeat: false,
   item: null
 };
 
@@ -23,6 +25,18 @@ const reducer = (state, action) => {
       return {
         ...state,
         playing: action.playing,
+      };
+
+    case "SET_SHUFFLE":
+      return {
+        ...state,
+        shuffle: action.shuffle,
+      };
+      
+    case "SET_REPEAT":
+      return {
+        ...state,
+        repeat: action.repeat,
       };
 
     case "SET_ITEM":

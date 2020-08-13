@@ -5,6 +5,7 @@ import SkipPreviousRoundedIcon from "@material-ui/icons/SkipPreviousRounded";
 import SkipNextRoundedIcon from "@material-ui/icons/SkipNextRounded";
 import ShuffleRoundedIcon from "@material-ui/icons/ShuffleRounded";
 import RepeatRoundedIcon from "@material-ui/icons/RepeatRounded";
+import RepeatOneRoundedIcon from "@material-ui/icons/RepeatOneRounded";
 import VolumeDownRoundedIcon from "@material-ui/icons/VolumeDownRounded";
 import PauseRoundedIcon from "@material-ui/icons/PauseRounded";
 import QueueMusicRoundedIcon from "@material-ui/icons/QueueMusicRounded";
@@ -13,7 +14,7 @@ import "./Footer.css";
 import { Slider } from "@material-ui/core";
 
 function Footer({ spotify }) {
-  const [{ token, item, playing }, dispatch] = useStateValue();
+  const [{ token, item, playing, shuffle, repeat }, dispatch] = useStateValue();
 
   useEffect(() => {
     spotify.getMyCurrentPlaybackState().then((r) => {
@@ -46,6 +47,42 @@ function Footer({ spotify }) {
       });
     }
   };
+  
+  const handleRepeat = () => {
+    if (repeat) {
+      spotify.setRepeat("off").then(() => {
+        dispatch({
+          type: "SET_REPEAT",
+          repeat: false,
+        })
+      });
+    } else {
+      spotify.setRepeat("track").then(() => {
+        dispatch({
+          type: "SET_REPEAT",
+          repeat: true,
+        })
+      });
+    }
+  }
+  
+  const handleShuffle = () => {
+    if (shuffle) {
+      spotify.setShuffle(false).then(() => {
+        dispatch({
+          type: "SET_SHUFFLE",
+          shuffle: false,
+        })
+      });
+    } else {
+      spotify.setShuffle(true).then(() => {
+        dispatch({
+          type: "SET_SHUFFLE",
+          shuffle: true,
+        })
+      });
+    }
+  }
 
   const skipNext = () => {
     spotify.skipToNext();
@@ -97,7 +134,7 @@ function Footer({ spotify }) {
       </div>
 
       <div className="footer__center">
-        <ShuffleRoundedIcon className="footer__icon" style={{ fontSize: 24 }} />
+        <ShuffleRoundedIcon onClick={handleShuffle} className={ shuffle ? "footer_iconGreen" : "footer__icon  footer__iconGreen" } style={{ fontSize: 24 }} />
         <SkipPreviousRoundedIcon onClick={skipPrevious} className="footer__icon" style={{ fontSize: 32 }}  />
         {playing ? (
           <PauseRoundedIcon
@@ -113,7 +150,19 @@ function Footer({ spotify }) {
           />
         )}
         <SkipNextRoundedIcon onClick={skipNext} className="footer__icon" style={{ fontSize: 32 }} />
-        <RepeatRoundedIcon className="footer__icon" style={{ fontSize: 24 }} />
+        {repeat ? (
+          <RepeatOneRoundedIcon
+            onClick={handleRepeat}
+            className="footer__icon  footer__iconGreen"
+            style={{ fontSize: 24 }} 
+          />
+        ) : (
+          <RepeatRoundedIcon
+            onClick={handleRepeat}
+            className="footer__icon"
+            style={{ fontSize: 24 }}
+          />
+        )}
       </div>
       <div className="footer__right">
         <QueueMusicRoundedIcon className="footer__icon" style={{ fontSize: 28 }}/>

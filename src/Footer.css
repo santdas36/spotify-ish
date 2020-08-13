@@ -44,6 +44,10 @@
   margin: 0 0.5rem;
 }
 
+.footer__iconGreen {
+  color: #1ED760 !important;
+}
+
 .footer__icon:hover {
   transform: scale(1.15) !important;
 }
