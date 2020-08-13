@@ -13,7 +13,7 @@ function Main ({ spotify }) {
   const playPlaylist = (id) => {
     spotify
       .play({
-        context_uri: `spotify:playlist:37i9dQZEVXcSdzTuPzdrW3`,
+        context_uri: `spotify:playlist:${id}`,
       })
       .then((res) => {
         spotify.getMyCurrentPlayingTrack().then((r) => {
@@ -65,7 +65,7 @@ function Main ({ spotify }) {
         <div className="main__icons">
           <PlayCircleFilledIcon
             className="main__playButton"
-            onClick={playPlaylist}
+            onClick={playPlaylist(discover_weekly.id)}
           />
           <FavoriteIcon fontSize="large" />
           <MoreHorizIcon />
