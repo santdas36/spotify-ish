@@ -19,20 +19,20 @@ function App() {
 
     if (_token) {
       spotifyApi.setAccessToken(_token);
-
+      sessionStorage.setItem( 'token', _token );
       dispatch({
         type: "SET_TOKEN",
         token: _token,
       });
       
-      const discoverApi = "https://api.spotify.com/v1/views/made-for-x";
-      const headers =  {
-		method: "GET",
-		headers: {
-		'Authorization': 'Bearer ' + _token
-		}
-	  };
-	  
+    const discoverApi = "https://api.spotify.com/v1/views/made-for-x";
+    const headers =  {
+      method: "GET",
+      headers: {
+        'Authorization': 'Bearer ' + _token
+      }
+    };
+    
      const getDiscoverWeekly = async () => {
          await fetch(discoverApi, headers)
           .then((response) => console.log('here >>>', response)) //401: unauthorized, duh

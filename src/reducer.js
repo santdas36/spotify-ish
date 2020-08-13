@@ -1,4 +1,5 @@
 import { findAllByDisplayValue } from "@testing-library/react";
+var sessionToken = sessionStorage.getItem( 'token' );
 
 export const initialState = {
   user: null,
@@ -8,6 +9,7 @@ export const initialState = {
   top_artists: null,
   playing: false,
   item: null,
+  token: sessionToken
 };
 
 const reducer = (state, action) => {
