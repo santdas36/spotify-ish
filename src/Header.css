@@ -43,6 +43,7 @@
   line-height: 1;
   cursor: pointer;
   opacity: 0.75;
+  transition: opacity 0.2s ease-in-out;
 }
 .header__rightText > small:hover {
   opacity: 1;

@@ -27,6 +27,8 @@
 
 .main__playButton {
   font-size: 64px !important;
+  
+  transition: transform 0.2s ease-in-out;
 }
 
 .main__icons > .MuiSvgIcon-root {
@@ -34,7 +36,6 @@
 }
 
 .main__playButton:hover {
-  transition: 100ms transform ease-in;
   transform: scale(1.08);
 }
 
