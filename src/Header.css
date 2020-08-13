@@ -24,12 +24,12 @@
   width: 100%;
   font-size: 16px;
   outline: none !important;
-  padding: 0.275rem 0.25rem 0.225 0.5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 .header__right > h4 {
   margin: 0;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   font-size: 1rem;
   font-weight: 700;
   opacity: 0.8;
