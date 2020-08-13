@@ -8,7 +8,7 @@ import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 import { getTokenFromResponse } from "./spotify";
 import { useStateValue } from "./StateProvider";
 
-function handlePlaylistChange => (id) {
+function handlePlaylistChange = (id) => {
   const [{ discover_weekly }, dispatch] = useStateValue();
   
   spotifyApi.getPlaylist(id).then((response) =>
