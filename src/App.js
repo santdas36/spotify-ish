@@ -9,7 +9,7 @@ import Login from "./Login";
 const spotifyApi = new SpotifyWebApi();
 
 function App() {
-  const [{ token }, { playlists }, dispatch] = useStateValue();
+  const [{ token }, dispatch] = useStateValue();
 
   useEffect(() => {
     
