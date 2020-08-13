@@ -62,11 +62,11 @@ function App() {
       });
 
       spotifyApi.getUserPlaylists().then((playlists) => {
-
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: playlists.items[0]
-        })
+        });
+        
         dispatch({
           type: "SET_PLAYLISTS",
           playlists,
