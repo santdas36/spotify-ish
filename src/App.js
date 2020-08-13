@@ -10,7 +10,6 @@ const spotifyApi = new SpotifyWebApi();
 
 function App() {
   const [{ token }, dispatch] = useStateValue();
-
   useEffect(() => {
     
     const hash = getTokenFromResponse();
@@ -65,12 +64,12 @@ function App() {
           type: "SET_PLAYLISTS",
           playlists,
         });
-      });
+    //  });
       
-      spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) => {
+    //  spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
-          discover_weekly: response,
+          discover_weekly: playlists.items[0]
         });
       });
     }
