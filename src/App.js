@@ -18,6 +18,7 @@ function App() {
     let _token = hash.access_token;
     if (sessionToken = sessionStorage.getItem('token')) {
       spotifyApi.setAccessToken(sessionToken);
+      console.log(spotifyApi.getAccessToken());
     }
     if (_token) {
       spotifyApi.setAccessToken(_token);
