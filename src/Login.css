@@ -17,6 +17,12 @@
   border-radius: 5rem;
   font-weight: 800;
   background-color: #1ED760;
+  transition: background-color 0.2s ease-in-out;
+  text-transform: uppercase;
+}
+
+.login > a:hover {
+  background-color: #09C14B;
 }
 
 @media (max-width: 480px) {
