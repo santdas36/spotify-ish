@@ -19,7 +19,6 @@ function App() {
     
     if (_token) {
       spotifyApi.setAccessToken(_token);
-      sessionStorage.setItem( 'token', _token );
       dispatch({
         type: "SET_TOKEN",
         token: _token,
@@ -68,11 +67,11 @@ function App() {
         });
       });
       
-      spotifyApi.getPlaylist(playlists?.items[0].id).then((response) => {
+      spotifyApi.getPlaylist(37i9dQZEVXcSdzTuPzdrW3).then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
-        })
+        });
       });
     }
   }, [token, dispatch]);
