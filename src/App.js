@@ -37,7 +37,7 @@ function App() {
     // await fetch(discoverApi, headers)
     //  .then((response) => console.log('here >>>', response)) //401: unauthorized, duh
     //};
-
+    //
     //getDiscoverWeekly();
     
 
@@ -68,7 +68,7 @@ function App() {
         });
       });
       
-      spotifyApi.getPlaylist(playlists?.item[0].id).then((response) => {
+      spotifyApi.getPlaylist(playlists?.items[0].id).then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
