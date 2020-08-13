@@ -65,7 +65,7 @@ function Main ({ spotify }) {
         <div className="main__icons">
           <PlayCircleFilledIcon
             className="main__playButton"
-            onClick={playPlaylist(discover_weekly.id)}
+            onClick={playPlaylist(discover_weekly?.id)}
           />
           <FavoriteIcon fontSize="large" />
           <MoreHorizIcon />
