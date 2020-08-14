@@ -22,6 +22,7 @@
 .login__inner > img {
   max-width: 360px;
   width: 75%;
+  margin-bottom: 2rem;
 }
 
 .login__inner > a {
@@ -33,7 +34,7 @@
   background-color: #09C14B;
   transition: background-color 0.2s ease-in-out;
   text-transform: uppercase;
-  font-size: 1.15rem;
+  margin: 2rem;
 }
 
 .login__inner > a:hover {
