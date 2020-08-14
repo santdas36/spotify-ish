@@ -20,7 +20,8 @@
 }
 
 .login__inner > img {
-  width: 360px;
+  max-width: 360px;
+  width: 75%;
 }
 
 .login__inner > a {
