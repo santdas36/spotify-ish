@@ -10,7 +10,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
-  max-width: calc(480px - 4rem);
+  max-width: 480px;
   width: 100%;
   margin: auto;
   padding: 2rem;
@@ -23,7 +23,7 @@
 
 .login__inner > img {
   max-width: 300px;
-  width: 75%;
+  width: 50%;
   margin: 4rem 0 4rem 0;
 }
 
