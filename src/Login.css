@@ -10,7 +10,7 @@
   flex-flow: column nowrap;
   align-items: center;
   justify-content: space-evenly;
-  max-width: 480px;
+  max-width: calc(480px - 4rem);
   width: 100%;
   margin: auto;
   padding: 2rem;
@@ -24,7 +24,7 @@
 .login__inner > img {
   max-width: 300px;
   width: 75%;
-  margin: 4rem 0 2rem 0;
+  margin: 4rem 0 4rem 0;
 }
 
 .login__inner > a {
@@ -58,5 +58,12 @@
     width: 100vw;
     border-radius: 0;
     text-align: left;
+    margin: 0;
+  }
+  .login__inner > a {
+    margin: 2rem 0;
+  }
+  .login__inner > img {
+    margin-right: auto;
   }
 }
