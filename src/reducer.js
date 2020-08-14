@@ -10,7 +10,7 @@ export const initialState = {
   shuffle: false,
   repeat: false,
   item: null,
-  token: 'nan'
+  //token: 'nan'
 };
 
 const reducer = (state, action) => {
