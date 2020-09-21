@@ -1,7 +1,5 @@
-import { findAllByDisplayValue } from "@testing-library/react";
-
 export const initialState = {
-  user: null,
+  user: "1",
   playlists: [],
   spotify: null,
   discover_weekly: null,
