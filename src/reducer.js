@@ -7,7 +7,8 @@ export const initialState = {
   playing: false,
   shuffle: false,
   repeat: false,
-  item: null
+  item: null,
+  //token: 'nan'
 };
 
 const reducer = (state, action) => {

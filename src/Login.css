@@ -5,12 +5,29 @@
   place-items: center;
 }
 
-.login > img {
-  width: 80%;
-  max-width: 400px;
+.login__inner {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  max-width: 480px;
+  width: 100%;
+  margin: auto;
+  padding: 2rem;
+  margin: 2rem;
+  background: #fff;
+  border-radius: 20px;
+  color: #202020;
+  text-align: center;
 }
 
-.login > a {
+.login__inner > img {
+  max-width: 300px;
+  width: 50%;
+  margin: 4rem 0 4rem 0;
+}
+
+.login__inner > a {
   color: white;
   text-decoration: none;
   padding: 1rem 2rem;
@@ -19,16 +36,34 @@
   background-color: #09C14B;
   transition: background-color 0.2s ease-in-out;
   text-transform: uppercase;
+  margin: 2rem;
 }
 
-.login > a:hover {
+.login__inner > a:hover {
   background-color: #07A641;
 }
 
+.login__desc > h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.login__thanks {
+  color: gray;
+}
+
 @media (max-width: 480px) {
-  .login > a {
-    display: block;
-    width: 80%;
-    text-align: center;
+  .login__inner {
+    height: 100vh;
+    width: 100vw;
+    border-radius: 0;
+    text-align: left;
+    margin: 0;
+  }
+  .login__inner > a {
+    margin: 2rem 0;
+  }
+  .login__inner > img {
+  margin: 2rem auto 6rem 0;
   }
 }
