@@ -17,7 +17,6 @@ function App() {
     let _token = hash.access_token;
 
     spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) => {
-          console.log("currPlaylist >>>",response);
           dispatch({
             type: "SET_DISCOVER_WEEKLY",
             discover_weekly: response,
