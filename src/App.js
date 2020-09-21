@@ -22,6 +22,7 @@ function App() {
             type: "SET_DISCOVER_WEEKLY",
             discover_weekly: response,
           });
+	});
 
     if (_token) {
       spotifyApi.setAccessToken(_token);
