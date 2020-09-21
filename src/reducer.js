@@ -1,5 +1,5 @@
 export const initialState = {
-  user: "1",
+  user: null,
   playlists: [],
   spotify: null,
   discover_weekly: null,
@@ -8,7 +8,7 @@ export const initialState = {
   shuffle: false,
   repeat: false,
   item: null,
-  //token: 'nan'
+  token: 'nan'
 };
 
 const reducer = (state, action) => {
