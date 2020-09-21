@@ -65,6 +65,8 @@ function App() {
           user,
         });
       });
+
+    }
   }, [token, dispatch]);
 
   return (
