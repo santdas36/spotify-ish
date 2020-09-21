@@ -16,13 +16,6 @@ function App() {
     window.location.hash = "";
     let _token = hash.access_token;
 
-    spotifyApi.getPlaylist("37i9dQZEVXcSdzTuPzdrW3").then((response) => {
-          dispatch({
-            type: "SET_DISCOVER_WEEKLY",
-            discover_weekly: response,
-          });
-	});
-
     if (_token) {
       spotifyApi.setAccessToken(_token);
       dispatch({
@@ -66,6 +59,20 @@ function App() {
         });
       });
 
+      spotifyApi.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists,
+        });
+        let playlistTop = playlists.items[0].id;
+        spotifyApi.getPlaylist(playlistTop).then((response) => {
+          console.log("currPlaylist >>>",response);
+          dispatch({
+            type: "SET_DISCOVER_WEEKLY",
+            discover_weekly: response,
+          });
+        });
+      });
     }
   }, [token, dispatch]);
 
